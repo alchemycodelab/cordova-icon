@@ -88,6 +88,32 @@ var getPlatforms = function (projectName) {
     ]
   });
   platforms.push({
+    name : 'android-foreground',
+    isAdded : fs.existsSync('platforms/android'),
+    iconsPath : 'platforms/android/app/src/main/res/',
+    icons : [
+      { name : 'mipmap-hdpi-v26/ic_launcher_foreground.png', size : 72 },
+      { name : 'mipmap-ldpi-v26/ic_launcher_foreground.png', size : 36 },
+      { name : 'mipmap-mdpi-v26/ic_launcher_foreground.png', size : 48 },
+      { name : 'mipmap-xhdpi-v26/ic_launcher_foreground.png', size : 96 },
+      { name : 'mipmap-xxhdpi-v26/ic_launcher_foreground.png', size : 144 },
+      { name : 'mipmap-xxxhdpi-v26/ic_launcher_foreground.png', size : 192 }
+    ]
+  });
+  platforms.push({
+    name : 'android-background',
+    isAdded : fs.existsSync('platforms/android'),
+    iconsPath : 'platforms/android/app/src/main/res/',
+    icons : [
+      { name : 'mipmap-hdpi-v26/ic_launcher_background.png', size : 72 },
+      { name : 'mipmap-ldpi-v26/ic_launcher_background.png', size : 36 },
+      { name : 'mipmap-mdpi-v26/ic_launcher_background.png', size : 48 },
+      { name : 'mipmap-xhdpi-v26/ic_launcher_background.png', size : 96 },
+      { name : 'mipmap-xxhdpi-v26/ic_launcher_background.png', size : 144 },
+      { name : 'mipmap-xxxhdpi-v26/ic_launcher_background.png', size : 192 }
+    ]
+  });
+  platforms.push({
     name : 'osx',
     // TODO: use async fs.exists
     isAdded : fs.existsSync('platforms/osx'),
