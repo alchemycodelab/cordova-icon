@@ -1,9 +1,8 @@
 {
-  "name": "cordova-icon",
-  "version": "1.0.0",
+  "name": "@blvz/cordova-icon",
+  "version": "2.0.0",
   "description": "Automatic icon resizing for Cordova",
   "main": "index.js",
-  "preferGlobal": true,
   "directories": {
     "bin": "./bin"
   },
@@ -12,19 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/AlexDisler/cordova-icon.git"
+    "url": "git://github.com/blvz/cordova-icon.git"
   },
   "keywords": [
     "cordova",
     "icon",
-    "resize"
+    "resize",
+    "sharp"
   ],
-  "author": "Alex Disler",
+  "author": "Rafael Belvederese <rafael@blvz.im>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexDisler/cordova-icon/issues"
+    "url": "https://github.com/blvz/cordova-icon/issues"
   },
-  "homepage": "https://github.com/AlexDisler/cordova-icon",
+  "homepage": "https://github.com/blvz/cordova-icon",
   "dependencies": {
     "colors": "^0.6.2",
     "fs-extra": "^0.30.0",

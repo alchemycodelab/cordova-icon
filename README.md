@@ -1,4 +1,7 @@
-# cordova-icon
+# @blvz/cordova-icon
+
+[cordova-icon](https://github.com/AlexDisler/cordova-icon) fork + updates.
+Uses [sharp](https://github.com/lovell/sharp/) instead of ImageMagick.
 
 <img src="cordova-icon-resize.png"/>
 
@@ -7,21 +10,11 @@ Automatic icon resizing for Cordova. Create an icon in the root folder of your C
 ### Installation
 
 ```bash
-$ sudo apt-get install imagemagick
-$ # on Mac: brew install imagemagick
-$ # on Windows: http://www.imagemagick.org/script/binary-releases.php#windows (check "Legacy tools")
-
-$ sudo npm install cordova-icon -g
-```
-If you are using an older version of cordova (before 7.x):
-
-```bash
-$ sudo npm install cordova-icon@0.13.0 -g
+$ yarn add --dev '@blvz/cordova-icon'
 ```
 
 ### Requirements
 
-- **ImageMagick installed**
 - At least one platform was added to your project ([cordova platforms docs](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides))
 - Cordova's config.xml file must exist in the root folder ([cordova config.xml docs](http://cordova.apache.org/docs/en/edge/config_ref_index.md.html#The%20config.xml%20File))
 
@@ -32,15 +25,11 @@ You can provide a platform-specific icon by naming it `icon-[platform].png`
 (e.g `icon-android.png`, `icon-ios.png`).
 Then run:
 
-     $ cordova-icon
+     $ yarn exec cordova-icon
 
 You also can specify manually a location for your `config.xml` or `icon.png`:
 
-     $ cordova-icon --config=config.xml --icon=icon.png
-
-If you run a old version of Cordova for iOS / Mac and you need your files in `/Resources/icons/`, use this option:
-
-     $ cordova-icon --xcode-old
+     $ yarn exec cordova-icon --config=config.xml --icon=icon.png
 
 For good results, your file should be:
 
@@ -64,7 +53,7 @@ To create a new hook, go to your cordova project and run:
 Paste the following into the hook script:
 
     #!/bin/bash
-    cordova-icon
+    yarn exec cordova-icon
 
 Then give the script +x permission:
 
@@ -74,15 +63,7 @@ That's it. Now every time you `cordova build`, the icons will be auto generated.
 
 ### Splash screens
 
-Check out [cordova-splash](https://github.com/AlexDisler/cordova-splash)
-
-### More
-
-- [cordova-plugin-inapppurchase](https://github.com/AlexDisler/cordova-plugin-inapppurchase) - a lightweight cordova plugin for in app purchases on iOS/Android
-- [ng-special-offer](https://github.com/AlexDisler/ng-special-offer) - prompt users to rate your cordova app in the app store
-- [ionic-lock-screen](https://github.com/AlexDisler/ionic-lock-screen) - passcode lock screen for ionic (with touch id support for iOS)
-- [ionic-zoom-view](https://github.com/AlexDisler/ionic-zoom-view) - an easy way to add a zoom view to images using an ionic modal
-- [ng-persist](https://github.com/AlexDisler/ng-persist) - store data on mobile devices (using cordova) that persists even if the user reinstalls the app
+Check out [cordova-splash](https://github.com/blvz/cordova-splash)
 
 ### License
 
